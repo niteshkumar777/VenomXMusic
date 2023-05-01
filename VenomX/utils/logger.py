@@ -1,6 +1,6 @@
 from config import LOG, LOG_GROUP_ID, MUSIC_BOT_NAME
-from VenomX import app
-from VenomX.utils.database import is_on_off
+from AarohiX import app
+from AarohiX.utils.database import is_on_off
 
 
 async def play_logs(message, streamtype):
@@ -11,6 +11,7 @@ async def play_logs(message, streamtype):
             chatusername = "ᴩʀɪᴠᴀᴛᴇ ᴄʜᴀᴛ"
         logger_text = f"""
 **{MUSIC_BOT_NAME} ᴩʟᴀʏ ʟᴏɢɢᴇʀ**
+
 **✨ᴄʜᴀᴛ✨:** {message.chat.title} [`{message.chat.id}`]
 »»————- ★ - ★ ————-««
 **🥀ᴜsᴇʀ🥀:** {message.from_user.mention}
@@ -20,9 +21,11 @@ async def play_logs(message, streamtype):
 **🌹ɪᴅ🌹:** `{message.from_user.id}`
 »»————- ★ - ★ ————-««
 **🍃ᴄʜᴀᴛ ʟɪɴᴋ🍃:** {chatusername}
+
 **🕊️sᴇᴀʀᴄʜᴇᴅ ғᴏʀ🕊️:** {message.text}
-**🔻sᴛʀᴇᴀᴍ ᴛʏᴩᴇ🔻:** {streamtype}""" 
-       if message.chat.id != LOG_GROUP_ID:
+
+**🔻sᴛʀᴇᴀᴍ ᴛʏᴩᴇ🔻:** {streamtype}"""
+        if message.chat.id != LOG_GROUP_ID:
             try:
                 await app.send_message(
                     LOG_GROUP_ID,
