@@ -49,7 +49,7 @@ def private_panel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
         ],
         [
             InlineKeyboardButton(
-                text="✨ sᴏᴜʀᴄᴇ ✨", url=config.GITHUB_REPO
+                text="✨ sᴏᴜʀᴄᴇ ✨", url=f"https://te.legra.ph/file/2b840f77292bceac86ba0.jpg"
             )
         ],
      ]
